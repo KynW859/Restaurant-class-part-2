@@ -8,12 +8,12 @@ public class Application {
     // create random object: rng
     // create int that contains a value generated from random object
     // then prints as an index of the ArrayList
-    // the cap is based on the list size minus one (in this case, up to 61)
+    // the cap is based on the list size (in this case, up to 61)
     // any value larger would result in the out of bounds exception
     public static void restRandom(ArrayList list){
         Random rng = new Random();
         try {
-            int restChoice = rng.nextInt(list.size()-1);
+            int restChoice = rng.nextInt(list.size());
             System.out.print(list.get(restChoice));
         }//end try
         catch (IllegalArgumentException e){} //blank because it should already inform the user the file is missing
